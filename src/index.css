@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.red-background {
+  @apply bg-red-400 h-screen flex flex-col justify-center items-center transition-colors duration-500 ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.blue-background {
+  @apply bg-cyan-600 h-screen flex flex-col justify-center items-center transition-colors duration-500 ease-in-out;
+}
+
+.start-button {
+  @apply bg-red-500 lg:text-3xl md:text-3xl text-xl text-white lg:py-2 lg:px-5 md:py-2 md:px-5 py-1 px-2 border-b-4 border-red-400 rounded-lg hover:bg-red-600 transition duration-500 ease-in-out;
+}
+.white-button {
+  @apply bg-white lg:text-3xl md:text-3xl text-xl text-red-400 lg:py-2 lg:px-5 md:py-2 md:px-5 py-1 px-2 border-b-4 border-gray-200 rounded-lg hover:bg-red-500 hover:border-red-400 hover:text-white transition duration-500 ease-in-out;
+}
+
+.pomodoro-button {
+  @apply bg-red-500 lg:text-3xl md:text-3xl text-xl text-white lg:py-2 lg:px-5 md:py-2 md:px-5 py-1 px-2 border-b-4 border-red-400 rounded-lg hover:bg-red-600 transition duration-500 ease-in-out;
+}
+
+.break-button {
+  @apply bg-cyan-600 lg:text-3xl md:text-3xl text-xl text-white lg:py-2 lg:px-5 md:py-2 md:px-5 py-1 px-2 border-b-4 border-cyan-500 rounded-lg hover:bg-cyan-700 transition duration-500 ease-in-out;
 }
